@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.classList.toggle('active');
         const icon = mobileMenuToggle.querySelector('i');
         icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        icon.classList.toggle('fa-times');*/
         
         // Блокировка прокрутки body при открытом меню
         document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 toggleMobileMenu();
             }
         });
-    });*/
+    });
     
     // =============================================
     // Плавная прокрутка к якорям
