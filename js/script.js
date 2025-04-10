@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // =============================================
    /* const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link');*/
     
     // Функция для переключения мобильного меню
     function toggleMobileMenu() {
         nav.classList.toggle('active');
         const icon = mobileMenuToggle.querySelector('i');
         icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');*/
+        icon.classList.toggle('fa-times');
         
         // Блокировка прокрутки body при открытом меню
         document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
