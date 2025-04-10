@@ -149,80 +149,97 @@
     cursor: pointer;
   }
   
+ .nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--light-text);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+/* Иконка телефона */
+.phone-link .fas {
+  font-size: 0.9em;
+  transition: transform 0.2s ease;
+}
+
+/* Анимация иконки при наведении */
+.phone-link:hover .fas {
+  transform: scale(1.1);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 15px;
+    column-gap: 20px;
   }
-  
-  .nav-link {
-    color: var(--light-text);
-    font-weight: 500;
-    font-size: 1rem;
-    transition: var(--transition);
-    position: relative;
-    padding: 5px 0;
-  }
-  
-  .nav-link:hover {
-    color: var(--primary-color);
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: width 0.3s;
-  }
-  
-  .nav-link:hover::after {
+
+  .phone-link {
+    order: 1; /* Перемещаем в отдельную строку */
     width: 100%;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    border-radius: 4px;
+    margin-top: 5px;
+    gap: 8px; /* Увеличиваем расстояние между иконкой и текстом */
+  }
+
+  .phone-link:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.2);
+  }
+}
+
+/* Оптимизация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .nav {
+    gap: 12px;
   }
   
   .phone-link {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    padding: 8px 12px;
   }
   
-  /* Мобильная адаптация */
-  @media (max-width: 768px) {
-    .nav {
-      flex-wrap: wrap;
-      justify-content: center;
-      row-gap: 15px;
-      column-gap: 20px;
-    }
-  
-    .phone-link {
-      order: 1; /* Перемещаем в отдельную строку */
-      width: 100%;
-      justify-content: center;
-      padding: 8px 0;
-      background-color: rgba(var(--primary-color-rgb), 0.1);
-      border-radius: 4px;
-      margin-top: 5px;
-    }
-  
-    .phone-link:hover {
-      background-color: rgba(var(--primary-color-rgb), 0.2);
-    }
+  .phone-link .phone-text {
+    font-size: 0.9rem;
   }
-  
-  /* Дополнительные улучшения для очень маленьких экранов */
-  @media (max-width: 480px) {
-    .nav {
-      gap: 15px;
-    }
-    
-    .phone-link .phone-text {
-      font-size: 0.9rem;
-    }
-  }
+}
   
   /* Основной контент */
   .main-content {
