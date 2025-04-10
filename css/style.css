@@ -784,7 +784,8 @@
     }
     
     .phone-link .phone-text {
-      display: none;
+      display: block;
+      margin: 0 auto;
     }
     
     .hero-section {
