@@ -428,16 +428,34 @@
     overflow-y: auto;
   }
   
+ .modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: modalFadeIn 0.3s;
+}
+
+/* Ограничение высоты на мобильных устройствах */
+@media (max-width: 768px) {
   .modal-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    animation: modalFadeIn 0.3s;
+    max-height: 80vh; /* 80% от высоты экрана */
+    overflow-y: auto; /* Включает скролл при переполнении */
+    padding: 20px; /* Уменьшаем отступы для экономии места */
+    margin: 20px auto; /* Отступы сверху/снизу и центрирование */
   }
+}
+
+/* Для очень маленьких экранов (опционально) */
+@media (max-width: 480px) {
+  .modal-content {
+    max-height: 70vh; /* Еще меньше, если нужно */
+    padding: 15px;
+  }
+}
   
   @keyframes modalFadeIn {
     from {
