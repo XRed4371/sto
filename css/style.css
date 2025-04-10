@@ -770,6 +770,7 @@
       transform: translateY(-150%);
       transition: transform 0.3s ease;
       z-index: 999;
+      overflow-y: auto; /* Включает скролл при переполнении */        
     }
     
     .nav.active {
