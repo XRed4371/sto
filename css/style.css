@@ -218,6 +218,19 @@
     gap: 20px; /* Пространство между карточками */
 }
 
+/* Для экранов меньше 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Создает 2 равные колонки */
+    }
+}
+
+/* Для экранов меньше 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr; /* Создает 1 колонку */
+    }
+}
   
   .service-card {
     background: #fff;
