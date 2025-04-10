@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     // =============================================
     // Мобильное меню
     // =============================================
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const icon = mobileMenuToggle.querySelector('i');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
-        
+        */
         // Блокировка прокрутки body при открытом меню
         document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
     }
