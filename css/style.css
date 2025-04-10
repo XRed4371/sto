@@ -143,9 +143,8 @@ body {
 
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 60px 0;
+    grid-template-columns: repeat(3, 1fr); /* Создает 3 равные колонки */
+    gap: 20px; /* Пространство между карточками */
 }
 
 .service-card {
@@ -186,13 +185,6 @@ body {
     color: #e74c3c;
     font-size: 18px;
 }
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Создает 3 равные колонки */
-    gap: 20px; /* Пространство между карточками */
-}
-
 
 .section-title {
     font-size: 36px;
