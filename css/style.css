@@ -189,6 +189,41 @@
     gap: 5px;
   }
   
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    .nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 15px;
+      column-gap: 20px;
+    }
+  
+    .phone-link {
+      order: 1; /* Перемещаем в отдельную строку */
+      width: 100%;
+      justify-content: center;
+      padding: 8px 0;
+      background-color: rgba(var(--primary-color-rgb), 0.1);
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+  
+    .phone-link:hover {
+      background-color: rgba(var(--primary-color-rgb), 0.2);
+    }
+  }
+  
+  /* Дополнительные улучшения для очень маленьких экранов */
+  @media (max-width: 480px) {
+    .nav {
+      gap: 15px;
+    }
+    
+    .phone-link .phone-text {
+      font-size: 0.9rem;
+    }
+  }
+  
   /* Основной контент */
   .main-content {
     flex: 1;
