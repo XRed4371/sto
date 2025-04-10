@@ -5,7 +5,7 @@
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav-link');
-    */
+    
     // Функция для переключения мобильного меню
     function toggleMobileMenu() {
         nav.classList.toggle('active');
@@ -27,7 +27,7 @@
                 toggleMobileMenu();
             }
         });
-    });
+    });*/
     
     // =============================================
     // Плавная прокрутка к якорям
