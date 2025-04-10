@@ -1,8 +1,8 @@
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // =============================================
     // Мобильное меню
     // =============================================
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+   /* const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav-link');
     
