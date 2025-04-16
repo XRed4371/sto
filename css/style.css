@@ -727,16 +727,6 @@
     line-height: 1.7;
     margin-bottom: 20px;
   }
-
-  .footer .contact-item a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer .contact-item a:hover {
-    color: var(--primary-color);
-}
   
   .contact-item {
     display: flex;
