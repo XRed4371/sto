@@ -226,22 +226,35 @@ document.addEventListener('DOMContentLoaded', function() {
         callbackForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Здесь должна быть логика отправки формы
+            // Собираем данные формы
             const formData = new FormData(callbackForm);
-            const data = Object.fromEntries(formData);
             
-            console.log('Форма отправлена:', data);
-            
-            // Можно добавить AJAX-отправку или другой обработчик
-            
-            // Закрытие модального окна после отправки
-            closeModal();
-            
-            // Очистка формы
-            callbackForm.reset();
-            
-            // Уведомление пользователя
-            alert('Ваша заявка принята! Мы свяжемся с вами в ближайшее время.');
+            // Отправляем форму через Fetch API
+            fetch(callbackForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Закрытие модального окна после отправки
+                    closeModal();
+                    
+                    // Очистка формы
+                    callbackForm.reset();
+                    
+                    // Уведомление пользователя
+                    alert('Ваша заявка принята! Мы свяжемся с вами в ближайшее время.');
+                } else {
+                    throw new Error('Ошибка при отправке формы');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже или свяжитесь с нами другим способом.');
+            });
         });
     }
     
@@ -254,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
+
     
     // Инициализация при полной загрузке страницы
     window.addEventListener('load', function() {
