@@ -7,7 +7,7 @@
     <title>Автосервис "МоторМастер" - профессиональный ремонт автомобилей</title>
     <meta name="description" content="Профессиональный ремонт и обслуживание автомобилей в Москве. Качественные услуги по доступным ценам с гарантией.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/sto/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -129,7 +129,7 @@
                     <p class="about-text">Наша автомастерская предоставляет полный спектр услуг по ремонту и обслуживанию автомобилей. Мы работаем с автомобилями любых марок и годов выпуска.</p>
                     <p class="about-text">В нашем распоряжении современное оборудование и инструменты, позволяющие выполнять работы любой сложности. Все мастера имеют высокую квалификацию и многолетний опыт работы.</p>
                     <p class="about-text">Мы используем только качественные оригинальные и проверенные аналоги запчастей, что гарантирует долговечность выполненных работ.</p>
-                    <button id="contactBtn" class="btn1">Связаться с нами</button>
+                    <button id="contactBtn" class="btn">Связаться с нами</button>
                 </div>
             </div>
         </section>
@@ -175,7 +175,12 @@
                     <div class="contact-info">
                         <h4>Телефон</h4>
                         <a href="tel:+71234567890" class="modal-phone">+7 (123) 456-78-90</a>
-                        <small>Основной номер</small>
+                        <small>
+                            <li><span>Пн-Пт: 08:00 - 20:00</span></li>
+                            <li><span>Сб: 09:00 - 18:00</span></li>
+                            <li><span>Вс: 09:00 - 16:00</span></li>
+                            <li><span>Обед с 13.00 до 14.00</span></li>
+                        </small>
                     </div>
                 </div>
                 
@@ -190,9 +195,9 @@
                 
                 <div class="contact-method">
                     <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="contact-info">
-                        <h4>Электронная почта</h4>
-                        <a href="mailto:info@motormaster.ru" class="modal-email">info@motormaster.ru</a>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info.motor.master@gmail.com">info.motor.master@gmail.com</a>
                     </div>
                 </div>
                 
@@ -211,7 +216,7 @@
                     <a href="https://wa.me/71234567890" class="messenger-btn whatsapp">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
-                    <a href="https://t.me/motormaster" class="messenger-btn telegram">
+                    <a href="https://t.me/MotorMasterBot" class="messenger-btn telegram">
                         <i class="fab fa-telegram-plane"></i> Telegram
                     </a>
                     <a href="viber://chat?number=+71234567890" class="messenger-btn viber">
@@ -222,10 +227,14 @@
             
             <div class="callback-form">
                 <h4>Обратный звонок</h4>
-                <form id="callbackForm">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="tel" placeholder="Ваш телефон" required>
-                    <button type="submit" class="btn1">Заказать звонок</button>
+                <form id="callbackForm" action="https://formspree.io/f/xgvaqjdl" method="POST">
+                    <input type="text" name="Имя" placeholder="Ваше имя" required>
+                    <input type="auto" name="Автомобиль" placeholder="Марка автомобиля" required>
+                    <input type="Time" name="Время звонка" placeholder="Когда вам удобно будет принять звонок" required>
+                    <input type="tel" name="Номер" placeholder="Ваш телефон" required>
+                    <input type="hidden" name="Заявка" value="Новая заявка на звонок с сайта МоторМастер">
+                    <input type="hidden" name="На почту" value="info.motor.master@gmail.com">
+                    <button type="submit" class="btn">Заказать звонок</button>
                 </form>
             </div>
         </div>
@@ -251,7 +260,7 @@
                     <li><span>Пн-Пт: 08:00 - 20:00</span></li>
                     <li><span>Сб: 09:00 - 18:00</span></li>
                     <li><span>Вс: 09:00 - 16:00</span></li>
-                    <li><span>Без перерывов</span></li>
+                    <li><span>Обед с 13.00 до 14.00</span></li>
                 </ul>
             </div>
             
@@ -267,7 +276,8 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope contact-icon"></i>
-                    <span>info@motormaster.ru</span>
+                    <a href="mailto:info.motor.master@gmail.com">info.motor.master@gmail.com</a>
+                </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock contact-icon"></i>
@@ -287,6 +297,6 @@
             &copy; <span id="currentYear"></span> Автосервис "МоторМастер". Все права защищены.
         </div>
     </footer>
-    <script src="/sto/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
